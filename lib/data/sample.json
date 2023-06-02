@@ -1,0 +1,19 @@
+{
+  "status": "ok",
+  "totalResults": 69,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "Yahoo Entertainment"
+      },
+      "author": "Debby Wu and Vlad Savov",
+      "title": "Nvidia CEO Gets Rock Star Reception in Taiwan With AI Stock Surge - Yahoo Finance",
+      "description": "(Bloomberg) -- Jensen Huang, chief executive officer of chip phenom Nvidia Corp., is getting the kind of treatment usually reserved for celebrities and...",
+      "url": "https://finance.yahoo.com/news/nvidia-ceo-gets-rock-star-062444219.html",
+      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/Cqbgn1JIZB6AZxKytzLlzQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD05MDQ-/https://media.zenfs.com/en/bloomberg_markets_842/e913ccd924ea76e6d7469c766d6098b4",
+      "publishedAt": "2023-05-30T09:24:56Z",
+      "content": "(Bloomberg) -- Jensen Huang, chief executive officer of chip phenom Nvidia Corp., is getting the kind of treatment usually reserved for celebrities and sports stars during a trip to Taiwan.\r\nMost Rea… [+4295 chars]"
+    }
+    ]
+  }
