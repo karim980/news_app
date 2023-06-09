@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class NewsItem extends StatelessWidget {
   String title;
@@ -34,7 +33,7 @@ class NewsItem extends StatelessWidget {
             height: 20,
           ),
           Container(
-            height: 120,
+            height: 140,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -43,7 +42,7 @@ class NewsItem extends StatelessWidget {
                   title,
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+                  style: Theme.of(context).textTheme.bodyText1
                 )),
                 Text(date,
                   style: TextStyle(fontWeight: FontWeight.bold),

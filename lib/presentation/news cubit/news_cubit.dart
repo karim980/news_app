@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/presentation/news%20cubit/cubit_states.dart';
 import 'package:news_app/presentation/pages/modules/business_screen.dart';
-import 'package:news_app/presentation/pages/modules/scince_Screen.dart';
+import 'package:news_app/presentation/pages/modules/scince_screen.dart';
 import 'package:news_app/presentation/pages/modules/sports_screen.dart';
 
 import '../../data/dio_helper.dart';
@@ -85,5 +85,12 @@ class NewsCubit extends Cubit<NewsStats> {
     });
   }
 
+  bool isDarkTheme = false;
+
+  void changeAppMode(){
+    isDarkTheme = !isDarkTheme;
+    emit(AppChangeModeState());
+    debugPrint('is dark theme $isDarkTheme');
+  }
 
 }

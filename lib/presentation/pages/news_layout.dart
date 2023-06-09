@@ -4,6 +4,8 @@ import 'package:news_app/presentation/news%20cubit/cubit_states.dart';
 import 'package:news_app/presentation/news%20cubit/news_cubit.dart';
 import 'package:news_app/presentation/pages/search_screen.dart';
 
+import 'modules/about_screen.dart';
+
 class NewsLayout extends StatelessWidget {
   String? query;
    NewsLayout({Key? key, this.query}) : super(key: key);
@@ -25,7 +27,52 @@ class NewsLayout extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 20),
                   child:
-                      IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
+                  PopupMenuButton<int>(
+                    itemBuilder: (context) => [
+                      // popupmenu item 1
+                      PopupMenuItem(
+                        onTap: () {
+                          NewsCubit.get(context).changeAppMode();
+                        },
+                        value: 1,
+                        // row has two child icon and text.
+                        child: Row(
+                          children: [
+                            Icon(Icons.sunny_snowing),
+                            SizedBox(
+                              // sized box with width 10
+                              width: 10,
+                            ),
+                            Text("Mode",style: Theme.of(context).textTheme.bodyText2,)
+                          ],
+                        ),
+                      ),
+                      // popupmenu item 2
+                      PopupMenuItem(
+                        value: 2,
+                        // row has two child icon and text
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder:(context) =>  AboutScreen()));
+                          },
+                          child: Row(
+                            children: [
+                              Icon(Icons.info_outline_rounded),
+                              SizedBox(
+                                // sized box with width 10
+                                width: 10,
+                              ),
+                              Text("About",style: Theme.of(context).textTheme.bodyText2,),
+                              SizedBox(width: 20,)
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                    offset: Offset(0, 100),
+                    position: PopupMenuPosition.over,
+
+                  ),
                 ),
               ],
               title: Text('News For You'),

@@ -36,7 +36,4 @@ class NewsGetScienceErrorState extends NewsStats{
 
 }
 
-
-
-
-
+class AppChangeModeState extends NewsStats{}
